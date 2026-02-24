@@ -1,2 +1,2 @@
-def test_success():
+def test_dummy():
     assert True
