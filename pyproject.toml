@@ -1,0 +1,13 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "shared_kernel"
+version = "0.1.0"
+description = "Librería compartida de modelos, config y base de datos para el proyecto Jupiter"
+dependencies = [
+    "pydantic-settings",
+    "sqlalchemy",
+    "psycopg[binary]"
+]
