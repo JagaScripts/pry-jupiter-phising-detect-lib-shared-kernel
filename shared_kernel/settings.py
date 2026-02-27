@@ -10,9 +10,12 @@ class Settings(BaseSettings):
 
     model_config = SettingsConfigDict(env_file=".env", extra="ignore")
 
-    # OpenAI
-    openai_api_key: str
-    openai_model: str = "gpt-4.1"
+    # LLMs
+    openai_api_key: str | None = None
+    openai_model: str = "gpt-4"
+
+    gemini_api_key: str | None = None
+    gemini_model: str = "gemini-2.5-flash"
 
     # Postgres
     database_url: str = "postgresql+psycopg://postgres:postgres@localhost:5432/phishing_detect"
